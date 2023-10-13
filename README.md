@@ -1,4 +1,3 @@
-# Projects
 # Attendance
 
 Problem Statement :
