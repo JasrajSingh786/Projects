@@ -27,10 +27,14 @@ With just one LSTM layer, the model's capacity to learn hierarchical features is
 The output at the last time step is typically used for prediction tasks. For example, in music generation, the output corresponds to the predicted pitch for the next note.
 
 Used in the Project:
+
 In the Vanilla LSTM implementation, the input sequence (encoded MIDI pitches) was passed through:
-An embedding layer: Converts pitch indices into dense vector representations.
-A single LSTM layer: Learns dependencies in the sequence.
-A Dense layer with softmax: Maps the LSTM output to a probability distribution over possible pitches.
+
+a. An embedding layer: Converts pitch indices into dense vector representations.
+
+b. A single LSTM layer: Learns dependencies in the sequence.
+
+c. A Dense layer with softmax: Maps the LSTM output to a probability distribution over possible pitches.
 
 
 Multi-Layer LSTM (Stacked LSTM)
@@ -64,7 +68,11 @@ Dropout is often applied between LSTM layers to reduce overfitting by randomly d
 Stacking layers increases the number of trainable parameters, leading to higher memory and computational requirements.
 
 Used in the Project:
-In the Multi-Layer LSTM implementation, the input sequence was processed through:
-An embedding layer: Converts pitch indices into dense vectors.
-Multiple LSTM layers: Each layer feeds into the next, progressively capturing higher-order dependencies.
-A Dense layer with softmax: Maps the final LSTM output to a probability distribution over pitches.
+
+a. In the Multi-Layer LSTM implementation, the input sequence was processed through:
+
+b. An embedding layer: Converts pitch indices into dense vectors.
+
+c. Multiple LSTM layers: Each layer feeds into the next, progressively capturing higher-order dependencies.
+
+d. A Dense layer with softmax: Maps the final LSTM output to a probability distribution over pitches.
